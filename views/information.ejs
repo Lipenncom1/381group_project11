@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body {
+                background-color: black;
+                display: flex;
+                flex-direction: row; 
+                justify-content: flex-start;
+                align-items: flex-start;
+                height: 100vh;
+                margin: 0;
+            }
+            .flex-grid {
+                background-color: black;
+                height: 100vh;
+                width: 16em;
+            }
+            .side-by-side {
+                display: flex;
+                flex-direction: column; 
+            }
+
+            .sideButton {
+                background-color: black;
+                color: white;
+                border: none;
+                margin-top: 0.5em;
+                text-align: center;
+                font-size: 20px;
+                width: 100%;
+                height: 90px;
+            }
+
+            .animalButton{
+                width: 7em;
+                height:3em;
+                flex-shrink: 0;
+                border:none;
+                color: black;
+                background-color: #D9D9D9;
+                border-radius: 14px;
+                font-size: 1.5em;
+                font-family: 'Joan';
+                margin-left: 7.2em;
+            }
+
+            .horizontal {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="side-by-side">
+            <div class="flex-grid">
+                                <div>
+                <a href = '/view'>
+                    <button class="sideButton">View</button></a>
+                </div>
+                <div>
+                <a href = '/report'>
+                    <button class="sideButton" >Report</button> </a>
+                </div> 
+                <div>
+                <a href = '/history'>
+                    <button class="sideButton">History</button></a>
+                </div>
+                <div>
+                <a href='/help'>
+                    <button class="sideButton">Help</button> </a>
+                </div>
+                <div>
+                <a href = '/information'>
+                    <button class="sideButton" style="background-color: #4386EC;">Information</button> </a>
+                </div>
+                <div>
+                    <img src="/images/exit.png" style="width: 5em;height: auto; margin-left:4.5em; margin-top: 12em;" onclick="someFunction();">
+                </div>
+            </div>
+        </div>
+        <div>
+            <div style="width: 70%;height: auto; border: 2px solid white; margin-top: 12em; margin-left: 6em;">
+                <h1 style="width: auto;height: auto;font-size: 32px;color: white; margin-left: 1em;">About Us</h1>
+                <p style="color: white;margin-left: 3em;">We are a Group of Year 3 Computer Science studying at Hong Kong Metropolitan University who are very passionate about programming and technologies. The purpose of this project is to utilise the power of the community to gather data about street animals such as the type of the animal and its location. Once uploaded to our platform, then Animal Control may be able to rescue them and provide them with a better life through means like Adoption.</p>
+                <br>
+            </div>
+            <div>
+                <h2 style="color: white; margin-left: 4em; margin-top: 1em;">Our Team</h2>
+                <img src="/images/contactInfo.png" style="width: 75%; margin-left: 6em;">
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body {
+                background-color: white;
+                display: flex;
+                flex-direction: row; 
+                justify-content: flex-start;
+                align-items: flex-start;
+                height: 100vh;
+                margin: 0;
+            }
+            .flex-grid {
+                background-color: black;
+                height: 100vh;
+                width: 16em;
+            }
+            .side-by-side {
+                display: flex;
+                flex-direction: column; 
+            }
+
+            .sideButton {
+                background-color: black;
+                color: white;
+                border: none;
+                margin-top: 0.5em;
+                text-align: center;
+                font-size: 20px;
+                width: 100%;
+                height: 90px;
+            }
+
+            .animalButton{
+                width: 7em;
+                height:3em;
+                flex-shrink: 0;
+                border:none;
+                color: black;
+                background-color: #D9D9D9;
+                border-radius: 14px;
+                font-size: 1.5em;
+                font-family: 'Joan';
+                margin-left: 7.2em;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="side-by-side">
+            <div class="flex-grid">
+                <div>
+                <a href = "/view">
+                    <button class="sideButton">View</button></a>
+                </div>
+                <div>
+                <a href = "/report">
+                    <button class="sideButton" style="background-color: #4386EC;">Report</button> </a>
+                </div> 
+                <div>
+                <a href = "/history">
+                    <button class="sideButton">History</button></a>
+                </div>
+                <div>
+                <a href= "/help">
+                    <button class="sideButton">Help</button> </a>
+                </div>
+                <div>
+                <a href = "/information">
+                    <button class="sideButton">Information</button> </a>
+                </div>
+                <div>
+                    <img src="/images/exit.png" style="width: 5em;height: auto; margin-left:4.5em; margin-top: 12em;" onclick="someFunction();">
+                </div>
+            </div>
+        </div>
+        <div>
+            <h1 style="margin-left: 12em;margin-top: 4.5em;">What animal do you see?</h1><br><br><br><br><br><br>
+            <div>
+                <button class="animalButton"><b>Street Cat</b></button>
+                <button class="animalButton"><b>Street Dog</b></button>
+                <button class="animalButton"><b>Street Animal</b></button>
+            </div>
+            <div>
+                <img src="/images/cat.png"style="margin-left: 4em;margin-top: 2em;width: 20em;">
+                <img src="/images/dog.png"style="margin-left: 4em;width: 20em;">
+                <img src="/images/monkey.png"style="margin-left: 6em;margin-top: 2em;width: 10em;">
+            </div>
+        </div>
+
+    </body>
+</html>

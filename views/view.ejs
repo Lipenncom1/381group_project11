@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body {
+                background-color: white;
+                display: flex;
+                flex-direction: row; 
+                justify-content: flex-start;
+                align-items: flex-start;
+                height: 100vh;
+                margin: 0;
+            }
+            .flex-grid {
+                background-color: black;
+                height: 100vh;
+                width: 16em;
+            }
+            .side-by-side {
+                display: flex;
+                flex-direction: column; 
+            }
+
+            .sideButton {
+                background-color: black;
+                color: white;
+                border: none;
+                margin-top: 0.5em;
+                text-align: center;
+                font-size: 20px;
+                width: 100%;
+                height: 90px;
+            }
+
+            .search-container {
+                display: flex;
+                align-items: center;
+                margin-left: 7em;
+                margin-top: 4em;
+            }
+
+            label {
+                margin-right: 1em;
+                font-size: 2em;
+            }
+
+            select {
+                font-size: 18px;
+                padding: 0.5em;
+            }
+
+            .radioButton{
+                color:gray;
+                font-size: 1.5em;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="side-by-side">
+            <div class="flex-grid">
+                <div>
+                <a href = "/view">
+                    <button class="sideButton" style="background-color: #4386EC;">View</button></a>
+                </div>
+                <div>
+                <a href = "/report">
+                    <button class="sideButton">Report</button> </a>
+                </div> 
+                <div>
+                <a href = "/history">
+                    <button class="sideButton">History</button></a>
+                </div>
+                <div>
+                <a href= "/help">
+                    <button class="sideButton">Help</button> </a>
+                </div>
+                <div>
+                <a href = "/information">
+                    <button class="sideButton">Information</button> </a>
+                </div>
+                <div>
+                    <img src="/images/exit.png" style="width: 5em;height: auto; margin-left:4.5em; margin-top: 12em;" onclick="someFunction();">
+                </div>
+            </div>
+        </div>
+        <form>
+            <div class="column-down">
+                <div class="search-container">
+                    <label>Search District</label>
+                    <select name="District">
+                        <option value="'default">Choose an option</option>
+                        <option value="Sham Shui Po">Kowloon</option>
+                        <option value="Yau Tsim Mong">Yau Tsim Mong</option>
+                    </select>
+                    <label style="margin-left: 3em;">Animal Type</label>
+                    <select name="District">
+                        <option value="'default">Choose an option</option>
+                        <option value="dog">Dog</option>
+                        <option value="cat">Cat</option>
+                        <option value="others">Others</option>
+                    </select>
+                </div>
+                <div class="search-container">
+                    <label>Breed</label>
+                    <select name="breed">
+                        <option value="'default">Choose an option</option>
+                        <option value="Golden Retriever">Golden Retriever</option>
+                    </select>
+                    <label style="margin-left: 3em;">Gender</label>
+                        <input type="radio" name="gender" value="male" id="male">
+                        <label class ="radioButton" for="male">Male</label><br>
+                        <input type="radio" name="gender" value="female" id="female">
+                        <label class ="radioButton" for="female">Female</label><br>
+                        <input type="radio" name="gender" value="unknown" id="unknown">
+                        <label class ="radioButton" for="unknown">Unknown</label><br>
+                </div>
+                <div class="search-container">
+                    <label>Prominent Features</label>
+                    <textarea rows="5"column="20" style="width: 50em;"></textarea>
+                </div>
+                <div class="search-container">
+                    <label>Disabilities</label>
+                    <textarea style="margin-left: 8em; width: 50em;" rows="5"column="20"></textarea>
+                </div><br><br><br>
+                <div>
+                    <label style="margin-left: 3em;">Adopted?</label>
+                    <input type="radio" name="adopted" value="yes" id="yes">
+                    <label class ="radioButton" for="yes">Yes</label>
+                    <input type="radio" name="adopted" value="no" id="no">
+                    <label class ="radioButton" for="no">No</label><br>
+                    <button style="width: 7em; height: 3em; flex-shrink: 0; float: right; border: none; color: white; background-color: #4386EC; border-radius: 5px; font-size: 1em;font-family: 'Joan';">Submit</button>
+                </div>
+            </div>
+        </form>
+    </body>
+</html>

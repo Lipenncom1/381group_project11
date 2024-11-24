@@ -1,0 +1,80 @@
+<html>
+    <head>
+        <style>
+            body {
+                background-color: black;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                margin: 0;
+                flex-direction: column;
+            }
+            #title {
+                color: rgb(84,132,229);
+                text-shadow: 3px 5px 3px rgb(76,34,184);
+                font-size: 80px;
+                text-align: center;
+                margin-top: -2rem;
+                text-decoration: underline;
+            }
+
+            .input {
+                background: transparent;
+                text-align: center;
+                font-family: Joan;
+                border-radius: 10px;
+                border: 1px solid var(--icon-color, #FFF);
+                margin-top: 1rem;
+                padding: 0.9%;
+                font-size: 30px;
+                color: white;
+                width: 80%;
+                max-width: 500px;
+                box-sizing: border-box;
+                margin-left: 13%;
+
+            }
+
+            #button {
+                width: 143px; 
+                height: 50px; 
+                flex-shrink: 0; 
+                border-radius: 18px; 
+                background: var(--blue2, #4386EC); 
+                font-family: Joan; 
+                color: white; 
+                font-size: 18px; 
+                border: none; 
+                margin-top: 1rem; 
+                display: block; 
+                margin-left: auto; 
+                margin-right: auto;
+            }
+
+            #link {
+                color: #4386EC;
+                margin-top: 1rem;
+                display: block;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <img src="/images/logo.png" style="width: 200px;height: auto; display: block; margin-top: -15rem;">
+        <h1 id="title">BRAVE RESCUES</h1>
+        <div id="log">
+            <form name="loginDetails" method="POST" action="/login">
+                <input class="input" placeholder="username" type="text" id="name" name="name" required><br>
+                <input type="password" id="password" name="password" required class="input" placeholder="password"><br><br><br>
+                <div class="button">
+                    <button id="button">Submit</button>
+                </div>
+                <br>
+                <div>
+                    <a href="/auth/facebook" id="link">Sign-in with Facebook</a>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
