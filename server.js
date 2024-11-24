@@ -234,10 +234,25 @@ app.get("/report", isLoggedIn, (req, res) => {
 });
 
 //更改
+//app.get("/history", isLoggedIn, (req, res) => {
+    //handle_Find(res, req.query.docs);
+	//res.render('history', {user: req.user});
+//});
+
 app.get("/history", isLoggedIn, (req, res) => {
-    handle_Find(res, req.query.docs);
-	res.render('history', {user: req.user});
+    // 调用 handle_Find 方法处理查询
+    handle_Find(res, req.query.docs, (error, animalData) => {
+        if (error) {
+            // 处理错误情况
+            console.error("Error fetching animal data:", error);
+            // 可以选择在这里返回错误页面或其他处理方式
+        } else {
+            // 将动物数据和用户数据传递给 history.ejs 模板
+            res.render('history', { user: req.user, animal: animalData });
+        }
+    });
 });
+
 
 app.get("/help", isLoggedIn, (req, res) => {
 	res.render('help', {user: req.user});

@@ -1,7 +1,7 @@
 {
   "name": "server",
   "description": "Brave Rescue App",
-  "author": "Group5 TeamLeader: <s1312513@live.hkmu.edu.hk>",
+  "author": "Group5",
   "version": "0.0.1",
   "dependencies": {
     "express": "*",
