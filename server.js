@@ -250,30 +250,5 @@ app.get('/*', (req, res) => {
 });
 
 
-
-
-
-//
-app.get('/', (req,res) => {
-    res.redirect('/find');
-})
-
-app.get('/find', (req,res) => {
-    handle_Find(res, req.query.docs);
-})
-
-app.get('/details', (req,res) => {
-    handle_Details(res, req.query);
-})
-
-app.get('/edit', (req,res) => {
-    handle_Edit(res, req.query);
-})
-
-app.post('/update', (req,res) => {
-    handle_Update(req, res, req.query);
-})
-
-
 const port = process.env.PORT || 8099;
 app.listen(port, () => { console.log(`Listening at http://localhost:${port}`); });
