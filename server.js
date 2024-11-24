@@ -181,6 +181,8 @@ app.set('views', './views');
 
 app.use(express.static('public'));
 
+//app.use(formidable());
+
 app.use((req, res, next) => {
     let d = new Date();
     console.log(`TRACE: ${req.path} was requested at ${d.toLocaleDateString()}`);

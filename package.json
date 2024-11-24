@@ -9,7 +9,8 @@
     "mongodb": "*",
     "passport":"*",
     "passport-facebook":"*",
-    "express-session":"*"
+    "express-session":"*",
+    "express-formidable":"*"
 
   },
   "engine": "node >= 0.10.0",
